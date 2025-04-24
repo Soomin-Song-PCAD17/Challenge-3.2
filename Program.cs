@@ -15,7 +15,8 @@ int SumDigitsInString(string input)
     int sum = 0;
     foreach (char c in input)
     {
-        if(char.IsDigit(c)) sum=sum+(Convert.ToInt32(c)-48);
+        if(char.IsDigit(c))
+            { sum = sum + (Convert.ToInt32(c) - Convert.ToInt32('0')); }
     }
     return sum;
 }
